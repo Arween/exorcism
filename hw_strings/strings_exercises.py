@@ -64,8 +64,10 @@ n = 0
 words = input("Text: ")
 list_words = words.split()
 for w in list_words:
-    if words.find(w) != -1:
-        n += 1
-
+    for w2 in list_words:
+        if w == w2:
+            n += 1
     print(w + ': ' + str(n))
     n = 0
+
+    # n = 0
